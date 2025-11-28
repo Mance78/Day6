@@ -1,9 +1,191 @@
-#m1{
-    color:aqua;
-    font-size: 34px;
-    
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+  background: linear-gradient(90deg, #ffd6e8, #a0c4ff) !important;
+  font-family: "Exo 2", sans-serif !important;
+color: #333 !important;
+background-image: repeating-radial-gradient(circle at 0 0, rgba(54, 69, 79, 0.2) 0, rgba(70, 90, 110, 0.2) 20px) !important;
+  gap: 15px;
+  margin: 0%;
+min-height: 100vh;
+  box-sizing: border-box;
+  overflow-x: auto;
+  top: 100px;
 }
-#m2{
-    color: aquamarine;
-    font-size: 76px;
+.navbar {
+  background-color: #7b1f3f !important;
+  backdrop-filter: blur(6px);
+  /* tạo hiệu ứng kính mờ */
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: #ffffff !important;
+}
+
+.navbar .nav-link.active {
+  font-weight: bold !important;
+  text-decoration: underline !important;
+  color: #00d4ff !important;
+}
+
+/* CARD style */
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 20px;
+}
+
+.card {
+  flex: 0 0 235px !important;
+  max-width: 270px !important;
+  max-height: 400px !important;
+  overflow: hidden !important;
+  background: #1a1a1a !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6) !important;
+  color: white !important;
+  display: flex !important;
+  flex-direction: column !important;
+  cursor: pointer !important;
+  transition: transform 0.2s ease, box-shadow 0.3s ease !important;
+
+}
+
+
+.card:hover {
+  /*  chỗ này làm cho card có hiệu ứng*/
+  transform: translateY(-6px) !important; 
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Ảnh trong card */
+.card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Thân card */
+.card-body {
+  padding: 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Tiêu đề */
+.card-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #ffffff !important;
+}
+
+/* Mô tả */
+.card-text {
+  font-size: 0.95rem;
+  color: #f2eaea !important;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  min-height: 70px;
+}
+
+/* Nút */
+.card-button {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 114, 255, 0.5);
+}
+
+.card-button:hover {
+  background: linear-gradient(to right, #0072ff, #0048ba);
+  transform: scale(1.05)
+}
+
+.carousel-inner img {
+  height: 500px;
+  object-fit: cover;
+  transition: transform 1s ease;
+  -webkit-transform: translateZ(0);
+}
+
+.carousel-item.active img {
+  transform: scale(1.05);
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-title {
+  text-align: center;
+  color: black;
+
+}
+
+.feedback {
+
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+   background-color: rgba(220, 230, 250, 0.3); /* xanh nhạt, ánh tím nhẹ */
+ box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(90, 90, 180, 0.3); /* viền xanh nhạt */
+  color: #1a3a8a; /* màu chữ cùng tông xanh đậm với nút */
+  border-radius: 16px;
+
+
+}
+
+
+.feedback-button {
+  background-color: #1a3a8a;
+   color: white;
+  width: 150px;
+  margin: auto;
+}
+
+
+
+
+footer {
+  background-color: rgba(30, 30, 30, 0.85) !important; /* nền đen xám mờ */
+  color: rgba(255, 120, 60, 0.8) !important; /* cam cháy dịu hơn */
+  padding: 30px 50px !important;
+  text-align: center !important;
+  border-top: 2px solid rgba(255, 120, 60, 0.6) !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.08em !important;
+  font-size: 15px !important; /* 👈 chữ nhỏ lại */
+  text-transform: uppercase !important;
+  box-shadow: 0 4px 12px rgba(255, 120, 60, 0.2) !important;
+}
+
+footer a {
+  color: rgba(255, 140, 80, 0.8) !important; /* cam sáng hơn một chút nhưng vẫn dịu */
+  text-decoration: none !important;
+  margin: 0 12px !important;
+  transition: color 0.3s ease !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+}
+
+footer a:hover {
+  color: rgba(255, 180, 120, 1) !important; /* hover sáng hơn nhưng không chói */
+  text-decoration: underline !important;
+}.social-icons{
+    color: rgba(255, 140, 80, 0.8) !important;
 }
